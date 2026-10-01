@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/base.css" />
     <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/inicio.css" />
     <meta name="theme-color" content="#0877B9" />
     <script>
       (function () {
@@ -31,22 +32,68 @@
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
     <site-header></site-header>
-    <main id="contenido">
-      <div class="container section">
-        <p class="eyebrow">Fase 0 · Base del proyecto</p>
-        <h1>Institución Educativa Madre Laura</h1>
-        <div class="prose">
-          <p>
-            Espacio digital de la comunidad educativa Madre Laura, en Apartadó, Antioquia.
-          </p>
-          <div class="notice" role="note">
+    <main id="contenido" data-inicio>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__contenido" data-reveal>
+            <h1 class="hero__titulo">EDUCACIÓN QUE TRANSFORMA</h1>
+            <p class="hero__subtitulo">Institución Educativa Madre Laura</p>
+            <p class="hero__texto">
+              Una comunidad educativa comprometida con la formación integral, la excelencia académica y los valores humanos y cristianos.
+            </p>
+            <div class="hero__acciones">
+              <a class="btn btn--primary" href="/institucion/">Conocer nuestra institución</a>
+              <a class="btn btn--secondary" href="/recursos/">Explorar recursos</a>
+            </div>
+          </div>
+          <figure class="hero__figura" data-reveal>
+            <img
+              class="hero__imagen"
+              src="/assets/img/placeholder-institucional.svg"
+              alt="Fotografía institucional de la Institución Educativa Madre Laura (pendiente de verificación institucional)"
+            />
+            <figcaption class="hero__pie">
+              Fotografía institucional — pendiente de verificación institucional
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <span class="eyebrow">Accesos rápidos</span>
+            <h2>¿Qué necesitas consultar?</h2>
+            <p>Accesos directos a la información más utilizada por la comunidad educativa.</p>
+          </header>
+          <ul class="accesos__lista" data-accesos></ul>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <span class="eyebrow">Secciones</span>
+            <h2>Conoce nuestra institución</h2>
+            <p>Un recorrido por institucionalidad, académica, comunidad, actualidad y recursos.</p>
+          </header>
+          <div class="card-grid" data-secciones></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="notice" role="note" data-reveal>
             <p>
-              Base técnica lista: sistema de diseño, tema claro/oscuro, navegación y pie
-              compartidos. Los contenidos definitivos se incorporan en las fases siguientes.
+              El contenido de esta página es una estructura basada en el
+              <strong>Manual de Rediseño Web (manual.md)</strong>. Los datos,
+              fechas, estadísticas, nombres, cargos, logros, horarios y documentos
+              que aparezcan en futuras secciones deben proceder de información
+              institucional verificada.
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <site-footer></site-footer>
     <script type="module" src="/src/scripts/app.js"></script>

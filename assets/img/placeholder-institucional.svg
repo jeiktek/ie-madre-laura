@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img">
+  <rect width="1200" height="800" fill="#e3f2fc" />
+  <g fill="none" stroke="#0877B9" stroke-width="6" opacity="0.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M500 380v-56a34 34 0 0 1 34-34h0a34 34 0 0 1 34 34v56" />
+    <path d="M610 330a34 34 0 0 0 34-34v-20a34 34 0 0 0-34-34h-84a68 68 0 0 1-68-68 34 34 0 0 0-34-34 34 34 0 0 0-34 34 34 34 0 0 1-34 34H400a34 34 0 0 0-34 34v20a34 34 0 0 0 34 34 34 34 0 0 0 34-34" />
+    <path d="M644 330v68" />
+    <circle cx="624" cy="330" r="34" />
+  </g>
+  <text x="600" y="500" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" fill="#0877B9" opacity="0.75">
+    Fotografía institucional
+  </text>
+  <text x="600" y="545" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#0877B9" opacity="0.6">
+    Pendiente de verificación institucional
+  </text>
+</svg>
