@@ -1,0 +1,15 @@
+{
+  "name": "ie-madre-laura",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio institucional de la Institución Educativa Madre Laura de Apartadó. HTML + CSS + JS vanilla; Vite sólo como servidor de desarrollo.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "generate": "node scripts/generate-content.mjs"
+  },
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}

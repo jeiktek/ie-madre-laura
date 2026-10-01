@@ -1,0 +1,134 @@
+:root {
+  --blue-500: #159bd7;
+  --blue-700: #0877b9;
+  --blue-300: #29b6e6;
+  --yellow-400: #ffd43b;
+  --yellow-500: #f4b942;
+  --green-600: #16a085;
+
+  --gray-050: #f8fafc;
+  --white: #ffffff;
+  --gray-200: #e2e8f0;
+  --slate-900: #0f172a;
+  --slate-500: #64748b;
+
+  --surface-raised: var(--white);
+  --page-bg: var(--gray-050);
+  --surface-bg: var(--white);
+  --line: var(--gray-200);
+  --line-strong: #cbd5e1;
+
+  --text-strong: var(--slate-900);
+  --text-muted: var(--slate-500);
+  --text-link: var(--blue-700);
+  --text-link-strong: #0668a5;
+  --text-on-brand: var(--white);
+  --accent-soft: #fff8dc;
+  --focus-ring: var(--blue-700);
+
+  --brand: var(--blue-500);
+  --brand-strong: var(--blue-700);
+  --brand-soft: #e3f2fc;
+  --brand-emphasis: var(--yellow-400);
+  --brand-emphasis-strong: var(--yellow-500);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --container-width: 1200px;
+  --container-gutter: 24px;
+  --gallery-width: 1280px;
+  --reading-width: 68ch;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+  --space-10: 96px;
+
+  --font-display: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-h1: clamp(2rem, 1.2rem + 3.2vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 1.25rem + 2vw, 2.625rem);
+  --fs-h3: clamp(1.25rem, 1.05rem + 0.8vw, 1.75rem);
+  --fs-h4: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --fs-body: 1rem;
+  --fs-body-lg: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-tiny: 0.875rem;
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.09);
+  --shadow-lg: 0 18px 44px rgba(15, 23, 42, 0.14);
+
+  --transition-fast: 140ms ease;
+  --transition-base: 220ms ease;
+
+  --header-height: 72px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --surface-raised: #152033;
+    --page-bg: #0b1220;
+    --surface-bg: #101a2b;
+    --line: #24334a;
+    --line-strong: #35486180;
+
+    --text-strong: #e6edf6;
+    --text-muted: #9fb0c6;
+    --text-link: var(--blue-300);
+    --text-link-strong: var(--blue-300);
+    --text-on-brand: #06121f;
+    --accent-soft: #3a3113;
+    --focus-ring: var(--blue-300);
+
+    --brand: var(--blue-300);
+    --brand-strong: var(--blue-300);
+    --brand-soft: #10293a;
+    --brand-emphasis: var(--yellow-400);
+    --brand-emphasis-strong: var(--yellow-500);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.6);
+  }
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --surface-raised: #152033;
+  --page-bg: #0b1220;
+  --surface-bg: #101a2b;
+  --line: #24334a;
+  --line-strong: #35486180;
+
+  --text-strong: #e6edf6;
+  --text-muted: #9fb0c6;
+  --text-link: var(--blue-300);
+  --text-link-strong: var(--blue-300);
+  --text-on-brand: #06121f;
+  --accent-soft: #3a3113;
+  --focus-ring: var(--blue-300);
+
+  --brand: var(--blue-300);
+  --brand-strong: var(--blue-300);
+  --brand-soft: #10293a;
+  --brand-emphasis: var(--yellow-400);
+  --brand-emphasis-strong: var(--yellow-500);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.6);
+}
