@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documentos de gestión — Institución Educativa Madre Laura</title>
+    <meta name="description" content="En esta sección encontraremos todos los documentos institucionales que determinan el direccionamiento institucional en todos su ámbitos desde las áreas de gestión que se contemplan en el PEI." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/tablas.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Recursos>/recursos/|Documentos de gestión"></site-breadcrumbs>
+    <main id="contenido">
+            <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Recursos</span>
+          <h1>Documentos de gestión</h1>
+          <p class="page-header__lead">Documentos que determinan el direccionamiento institucional en todos sus ámbitos.</p>
+        </header>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="prose">
+            <p>En esta sección encontraremos todos los documentos institucionales que determinan el direccionamiento institucional en todos su ámbitos desde las áreas de gestión que se contemplan en el PEI.</p>
+          </div>
+          <div class="tabla-envoltura" tabindex="0" role="region" aria-labelledby="tabla-documentos">
+            <table class="tabla">
+              <caption id="tabla-documentos">Documentos de gestión institucional</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Documento</th>
+                  <th scope="col">Grupo</th>
+                  <th scope="col">Año</th>
+                  <th scope="col">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">Proyecto educativo iinstitucional P.E.I</th>
+                <td>Gestión institucional</td>
+                <td>—</td>
+                <td class="pendiente"><span class="pendiente__badge">Pendiente</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Manual de convivencia</th>
+                <td>Gestión institucional</td>
+                <td>—</td>
+                <td class="pendiente"><span class="pendiente__badge">Pendiente</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Sistema institucional de evaluación de los estudiantes S.I.E.E.</th>
+                <td>Gestión institucional</td>
+                <td>—</td>
+                <td class="pendiente"><span class="pendiente__badge">Pendiente</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="notice" role="note">
+            <p>Los archivos de estos documentos no están disponibles en el repositorio. Su carga queda pendiente; los títulos se conservan tal como aparecen en el documento institucional original.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

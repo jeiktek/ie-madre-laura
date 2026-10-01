@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto — Institución Educativa Madre Laura</title>
+    <meta name="description" content="Datos de contacto de la Institución Educativa Madre Laura de Apartadó, Antioquia." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/tablas.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Contacto"></site-breadcrumbs>
+    <main id="contenido">
+            <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Contacto</span>
+          <h1>Contacto</h1>
+          <p class="page-header__lead">Información de contacto de la Institución Educativa Madre Laura.</p>
+        </header>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="prose">
+            <p>Los datos de contacto institutional (dirección, teléfono, correo y horários de atención) no están especificados en los documentos institucionales disponibles.</p>
+            <dl class="definiciones">
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Barrio Ortiz, comuna N.° 4 José Joaquín Vélez, municipio de Apartadó, Antioquia, Colombia.</dd>
+              </div>
+              <div>
+                <dt>Teléfono</dt>
+                <dd>Información no especificada en los documentos institucionales.</dd>
+              </div>
+              <div>
+                <dt>Correo electrónico</dt>
+                <dd>Información no especificada en los documentos institucionales.</dd>
+              </div>
+              <div>
+                <dt>Horario de atención</dt>
+                <dd>Información no especificada en los documentos institucionales.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

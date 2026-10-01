@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recursos — Institución Educativa Madre Laura</title>
+    <meta name="description" content="Documentos institucionales, documentos de gestión, cronogramas y formatos." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/tablas.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Recursos"></site-breadcrumbs>
+    <main id="contenido">
+            <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Recursos</span>
+          <h1>Recursos</h1>
+          <p class="page-header__lead">Documentos institucionales, documentos de gestión, cronogramas y formatos.</p>
+        </header>
+      </div>
+      <section class="section">
+        <div class="container">
+            <p>Disponemos en esta sección de todos los documentos institucionales y formatos que son de interés para los docentes y que pueden visualizar la comunidad educativa en general.</p>
+          <div class="card-grid">
+            <article class="card" data-reveal>
+              <h2 class="card__title">Documentos institucionales</h2>
+              <p>Plan de mejoramiento, inducción y programación académica.</p>
+              <a class="card__link" href="/recursos/documentos/">Ver documentos</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Documentos de gestión</h2>
+              <p>PEI, Manual de convivencia y SIEE.</p>
+              <a class="card__link" href="/recursos/gestion/">Ver gestión</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Cronogramas</h2>
+              <p>Cronogramas de atención a padres y acompañamiento en descansos.</p>
+              <a class="card__link" href="/recursos/cronogramas/">Ver cronogramas</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Formatos</h2>
+              <p>Formatos institucionales.</p>
+              <a class="card__link" href="/recursos/formatos/">Ver formatos</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Académico — Institución Educativa Madre Laura</title>
+    <meta name="description" content="Resultados académicos, horarios, planes de estudio y recursos para la comunidad educativa." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/tablas.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Académico"></site-breadcrumbs>
+    <main id="contenido">
+            <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Académico</span>
+          <h1>Académico</h1>
+          <p class="page-header__lead">Resultados académicos, horarios, planes de estudio y recursos para la comunidad educativa.</p>
+        </header>
+      </div>
+      <section class="section">
+        <div class="container">
+            <p>La información académica de la institución se organiza por resultados de excelencia, horarios, planes y áreas, planeación y recursos de apoyo.</p>
+          <div class="card-grid">
+            <article class="card" data-reveal>
+              <h2 class="card__title">Excelencia académica</h2>
+              <p>Resultados por grado y período, transcritos del contenido institucional.</p>
+              <a class="card__link" href="/academico/excelencia-academica/">Ver resultados</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Horarios</h2>
+              <p>Horario general de clases y horarios por timbre.</p>
+              <a class="card__link" href="/academico/horarios/">Ver horarios</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Planes y áreas</h2>
+              <p>Plan de estudios y programación por departamentos de áreas.</p>
+              <a class="card__link" href="/academico/planes/">Ver planes</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Planeación académica</h2>
+              <p>Programación de la planeación por departamentos de áreas.</p>
+              <a class="card__link" href="/academico/planeacion/">Ver planeación</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Recursos académicos</h2>
+              <p>Materiales y herramientas de apoyo al proceso de enseñanza.</p>
+              <a class="card__link" href="/academico/recursos/">Ver recursos</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

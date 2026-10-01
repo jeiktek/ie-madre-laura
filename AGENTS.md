@@ -4,12 +4,10 @@ Rediseño web del sitio institucional. Documento, español, sin backend.
 
 ## Estado actual
 
-Greenfield: el repositorio contiene **sólo especificación**, ningún código.
+Git inicializado (rama `main`). **33 páginas generadas** en `academico/`, `comunidad/`, `actualidad/`, `institucion/`, `recursos/` y `contacto/`.
 
 - `manual.md` — spec completa de UI/UX (parte 01) y estructura/contenido (parte 02), 2989 líneas. **Fuente de verdad** para diseño, arquitectura y contenido.
 - `instructions.md` — restricciones de stack y criterios de aceptación (25 líneas).
-
-No hay `package.json`, no hay git, no hay lint/typecheck/test ni assets. Al arrancar trabajo: inicializar git. No inventes scripts de test o lint que no existan.
 
 Antes de implementar cualquier sección, lee la parte correspondiente de `manual.md`. Está orquestado por números de sección (`# 4. Sistema de colores`, `# 23. Design Tokens`); busca por número, no por lectura lineal.
 
@@ -17,19 +15,34 @@ Antes de implementar cualquier sección, lee la parte correspondiente de `manual
 
 - `npm run dev` — único comando de desarrollo (Vite, puerto 5173).
 - `npm run preview` — sirve el sitio estático sin transformaciones.
-- `npm run generate` — regenera las páginas de `institucion/` desde `src/data/institucion.js` y `src/scripts/pagina.js`. **Edita los datos, nunca el HTML generado.**
+- `npm run generate` — regenera las páginas de `institucion/` y el resto de secciones.
+- `npm run generate:institucion` / `generate:secciones` — regeneran un subconjunto.
+- `npm run generate:excellence` — reextrae las tablas de excelencia desde `contenido.txt`.
+- `npm run verify` — comprueba que cada enlace interno resuelva, que haya un H1 por página y que no haya IDs duplicados.
+
+## Generadores: edita los datos, nunca el HTML
+
+Todo el HTML bajo `academico/`, `comunidad/`, `actualidad/`, `institucion/`, `recursos/` y `contacto/` es **generado**. Cambia `src/data/*.js` o el generador y vuelve a correr `npm run generate`.
+
+### `src/data/excelencia.js` es generado — no lo edites a mano
+
+Lo produce `scripts/extraer-excelencia.mjs` desde `contenido.txt`. **Editar ese archivo a mano revierte datos falsos**: ya pasó, se colaron nombres que no existen en el fuente. El extractor **falla con código de salida 1** si detecta una celda que no exista literalmente en `contenido.txt`, así que no puede volver a pasar en silencio.
+
+Para cambiar la transcripción, se cambia el extractor y se corre `npm run generate:excellence`.
 
 ## Contenido real: `contenido.txt`
 
-Texto institucional verificado subido por el usuario. Es la fuente para las fases 2-5. **Copia el texto literal, no lo reescribas ni lo completes.** Ya volcado a `src/data/institucion.js` (contextualización, historia, hitos).
+Texto institucional verificado subido por el usuario. Es la fuente para las fases 2-5. **Copia el texto literal, no lo reescribas ni lo completes.** Ya volcado a `src/data/institucion.js` (contextualización, historia, hitos), `src/data/identidad.js` (principios, valores, misión, filosofía, visión, lema, bandera, escudo, himno) y `src/data/comunidad.js` (gobierno escolar, padres, eventos).
 
 Trampas reales de ese archivo, no las "arregles" por tu cuenta:
 
-- El bloque titulado **"PRINCIPIOS RECTORES" (línea 434) no contiene principios rectores**: es el contenido de la **Semana Laurista 2022** (bautismo, donatón, bingo, desafío Laurista). No lo publiques en `/institucion/principios-rectores/`, que sigue con el placeholder de §72.
-- Las tablas de **Excelencia académica 2022-2024** vienen de pegado desde una hoja: hay celdas con dos o tres nombres juntos y filas desalineadas. No se puede adivinar qué nombre pertenece a qué columna. Pide confirmación antes de publicar nombres de estudiantes.
-- La tabla de **2023 tercer período** está estructuralmente rota (líneas 222-322): los nombres no se pueden asignar a grado/grupo con certeza.
+- Hay **dos** bloques titulados "PRINCIPIOS RECTORES". El de la **línea 1 sí es el real** (principios, propuesta educativa). El de la **línea 560 no lo es**: es el contenido de la **Semana Laurista 2022** (eucaristía, donatón, bingo, desafío Laurista, festival de valores). Va a `/actualidad/semana-laurista/`, con una nota que aclare el desajuste del encabezado original.
+- Las tablas de **Excelencia académica 2022-2024** vienen de pegado desde una hoja: hay celdas con dos o tres nombres juntos y filas desalineadas. No se puede adivinar qué nombre pertenece a qué columna. Se publican **tal cual**, con una nota visible de transcripción literal; no reasignes nombres.
+- La tabla de **2023 tercer período** está estructuralmente rota (líneas 348-403): los nombres no se pueden asignar a grado/grupo con certeza, y los grados aparecen como celdas de una sola columna.
 - **Contexto social**: la frase "Sus viviendas son de material y…" está truncada en el original. Se publica tal cual.
 - El orden de los nombres de estudiantes **cambia entre años** (2022 "Apellido Nombre", 2023 "Nombre Apellido", 2024 en mayúsculas). No lo normalices.
+- Los **títulos de documentos** tienen errores ortográficos en el original ("IINSTITUCIONAL", "diredción"). Se conservan tal cual.
+- El bloque de la Semana Laurista termina en "festival de valores" como encabezado suelto, sin contenido.
 
 No hay lint, typecheck ni tests. No los inventes.
 
@@ -49,6 +62,21 @@ Verificado en navegador. `#159BD7` (`--color-primary` del manual) da sólo **3.1
 - Sobre fondos azul suave (`--brand-soft`): `#0877B9` sólo da 4.22:1 → usa **`--text-link-strong`** (`#0668a5`, 5.2:1). Ya está aplicado a nav activo, botones secundarios y hover; no lo reviertas a `--brand-strong`.
 - Tokens dark derivados: `--page-bg #0b1220`, `--surface-bg #101a2b`, `--surface-raised #152033`, `--text-strong #e6edf6`, `--text-muted #9fb0c6`. Todos ≥4.5:1, comprobado.
 - **Sobre `--brand-strong` como fondo:** el hero lo usa con texto `--text-on-brand` (4.83:1 claro / 8.01:1 oscuro, ambos AA). Pero si pones texto de marca *encima* de `--brand-strong`, usa siempre `--text-on-brand`, nunca blanco fijo: el fondo se aclara en tema oscuro y el blanco cae a 2.35:1.
+
+## Trampa de `app.js`: nunca uses `data-anio` en contenido
+
+`src/scripts/app.js` hace `document.querySelector('[data-anio]')` para pintar el año del pie. Es un selector **global y sin alcance**: el primer elemento que encuentre en el documento gana. Si una sección de contenido usa `data-anio`, su `textContent` se sobreescribe con el año actual y **todo su contenido interior se borra**.
+
+Ya pasó: las 6 tablas de excelencia desaparecieron del DOM sin error de consola, sólo con `tbody: 0`.
+
+Usa `data-excelencia-anio` / `data-excelencia-periodo` para filtros, y cualquier otro prefijo. Si un componente necesita "el año del footer", dale una clase o un `id` propio, no un atributo genérico.
+
+## Verificación
+
+- `npm run verify` — enlaces internos, un H1 por página, IDs duplicados. Sale con código 1 si algo falla.
+- Para Newly added UI, confirma en navegador antes de commitear: que el DOM tiene lo que esperas (`--eval` contando nodos), no sólo que la página da 200. Una tabla HTML correcta puede desaparecer por un selector mal escrito.
+
+No hay lint, typecheck ni tests unitarios. No los inventes.
 
 ## Flujo obligatorio
 

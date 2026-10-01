@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comunidad — Institución Educativa Madre Laura</title>
+    <meta name="description" content="Gobierno escolar, familias, estudiantes, docentes y actividades de la comunidad educativa." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/tablas.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Comunidad"></site-breadcrumbs>
+    <main id="contenido">
+            <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Comunidad</span>
+          <h1>Comunidad</h1>
+          <p class="page-header__lead">Gobierno escolar, familias, estudiantes, docentes y actividades de la comunidad educativa.</p>
+        </header>
+      </div>
+      <section class="section">
+        <div class="container">
+            <p>La comunidad educativa de la Institución Educativa Madre Laura se organiza mediante el gobierno escolar y la participación de familias, estudiantes y docentes.</p>
+          <div class="card-grid">
+            <article class="card" data-reveal>
+              <h2 class="card__title">Gobierno escolar</h2>
+              <p>Proceso de elección del personero y del representante de los estudiantes.</p>
+              <a class="card__link" href="/comunidad/gobierno-escolar/">Ver gobierno escolar</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Padres de familia</h2>
+              <p>Reunión general de padres y Socialización de directrices.</p>
+              <a class="card__link" href="/comunidad/padres-de-familia/">Ver información</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Estudiantes</h2>
+              <p>Información-dirigida a estudiantes de la institución.</p>
+              <a class="card__link" href="/comunidad/estudiantes/">Ver información</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Docentes</h2>
+              <p>Información dirigida al cuerpo docente.</p>
+              <a class="card__link" href="/comunidad/docentes/">Ver información</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Convivencia</h2>
+              <p>Acuerdos de convivencia y Manual de convivencia institucional.</p>
+              <a class="card__link" href="/comunidad/convivencia/">Ver convivencia</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Actividades comunitarias</h2>
+              <p>Actividades y eventos de la comunidad educativa.</p>
+              <a class="card__link" href="/comunidad/actividades/">Ver actividades</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

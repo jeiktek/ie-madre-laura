@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Actualidad — Institución Educativa Madre Laura</title>
+    <meta name="description" content="Noticias, eventos y actividades de la comunidad educativa." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/tablas.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Actualidad"></site-breadcrumbs>
+    <main id="contenido">
+            <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Actualidad</span>
+          <h1>Actualidad</h1>
+          <p class="page-header__lead">Noticias, eventos y actividades de la comunidad educativa.</p>
+        </header>
+      </div>
+      <section class="section">
+        <div class="container">
+            <p>Los eventos y actividades de la institución se documentan por año, incluyendo la Semana Laurista y las jornadas de premier día de clases.</p>
+          <div class="card-grid">
+            <article class="card" data-reveal>
+              <h2 class="card__title">Eventos</h2>
+              <p>Bazar gastronómico, entrega de símbolos y feria de la ciencia.</p>
+              <a class="card__link" href="/actualidad/eventos/">Ver eventos</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Semana Laurista</h2>
+              <p>Celebración de la semana Laurista con donatón y desafío Laurista.</p>
+              <a class="card__link" href="/actualidad/semana-laurista/">Ver semana Laurista</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Primer día 2026</h2>
+              <p>“Excavando en la profundidades del conocimiento”.</p>
+              <a class="card__link" href="/actualidad/primer-dia-2026/">Ver jornada</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Noticias</h2>
+              <p>Novedades institucionales.</p>
+              <a class="card__link" href="/actualidad/noticias/">Ver noticias</a>
+            </article>
+            <article class="card" data-reveal>
+              <h2 class="card__title">Archivo por año</h2>
+              <p>Actividades archivadas por año.</p>
+              <a class="card__link" href="/actualidad/archivo/">Ver archivo</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

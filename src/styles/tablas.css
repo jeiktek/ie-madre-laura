@@ -1,0 +1,187 @@
+.tabla-envoltura {
+  overflow-x: auto;
+  margin-block: var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+}
+
+.tabla-envoltura:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-body);
+  text-align: left;
+}
+
+.tabla caption {
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--text-strong);
+  text-align: left;
+}
+
+.tabla thead th {
+  position: sticky;
+  top: 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--brand-soft);
+  border-bottom: 2px solid var(--line-strong);
+  font-family: var(--font-display);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-link-strong);
+  white-space: nowrap;
+}
+
+.tabla tbody th,
+.tabla td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.tabla tbody th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-strong);
+  white-space: nowrap;
+}
+
+.tabla tbody tr:last-child th,
+.tabla tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background: var(--surface);
+}
+
+.tabla__nota {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--fs-tiny);
+  color: var(--text-muted);
+}
+
+.tabla-grado th {
+  background: var(--surface-raised);
+  letter-spacing: 0.08em;
+}
+
+.tabla-fuente {
+  margin-top: var(--space-3);
+  font-size: var(--fs-tiny);
+  color: var(--text-muted);
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: end;
+  margin-block: var(--space-5);
+}
+
+.filtros__campo {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.filtros__campo label {
+  font-family: var(--font-display);
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.filtros select,
+.filtros input {
+  min-width: 12rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--text-strong);
+  font: inherit;
+}
+
+.filtros select:focus-visible,
+.filtros input:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.pendiente {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+}
+
+.pendiente__badge {
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  font-size: var(--fs-tiny);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.versos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.versos li {
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--brand-emphasis);
+  background: var(--surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.lista-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-valores li {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.lista-puntos {
+  margin: var(--space-4) 0;
+  padding-left: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.lista-puntos li {
+  color: var(--text-muted);
+}
