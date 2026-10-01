@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "generate": "node scripts/generate-content.mjs"
+    "generate": "node scripts/generate-institucion.mjs",
+    "generate:institucion": "node scripts/generar-institucion.mjs"
   },
   "devDependencies": {
     "vite": "^8.3.2"

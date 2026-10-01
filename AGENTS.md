@@ -17,7 +17,19 @@ Antes de implementar cualquier sección, lee la parte correspondiente de `manual
 
 - `npm run dev` — único comando de desarrollo (Vite, puerto 5173).
 - `npm run preview` — sirve el sitio estático sin transformaciones.
-- `npm run generate` — genera páginas de detalle desde `src/data/` (Fase 5).
+- `npm run generate` — regenera las páginas de `institucion/` desde `src/data/institucion.js` y `src/scripts/pagina.js`. **Edita los datos, nunca el HTML generado.**
+
+## Contenido real: `contenido.txt`
+
+Texto institucional verificado subido por el usuario. Es la fuente para las fases 2-5. **Copia el texto literal, no lo reescribas ni lo completes.** Ya volcado a `src/data/institucion.js` (contextualización, historia, hitos).
+
+Trampas reales de ese archivo, no las "arregles" por tu cuenta:
+
+- El bloque titulado **"PRINCIPIOS RECTORES" (línea 434) no contiene principios rectores**: es el contenido de la **Semana Laurista 2022** (bautismo, donatón, bingo, desafío Laurista). No lo publiques en `/institucion/principios-rectores/`, que sigue con el placeholder de §72.
+- Las tablas de **Excelencia académica 2022-2024** vienen de pegado desde una hoja: hay celdas con dos o tres nombres juntos y filas desalineadas. No se puede adivinar qué nombre pertenece a qué columna. Pide confirmación antes de publicar nombres de estudiantes.
+- La tabla de **2023 tercer período** está estructuralmente rota (líneas 222-322): los nombres no se pueden asignar a grado/grupo con certeza.
+- **Contexto social**: la frase "Sus viviendas son de material y…" está truncada en el original. Se publica tal cual.
+- El orden de los nombres de estudiantes **cambia entre años** (2022 "Apellido Nombre", 2023 "Nombre Apellido", 2024 en mayúsculas). No lo normalices.
 
 No hay lint, typecheck ni tests. No los inventes.
 
@@ -36,6 +48,7 @@ Verificado en navegador. `#159BD7` (`--color-primary` del manual) da sólo **3.1
 - Texto de marca: `--text-link` / `--brand-strong` = `#0877B9` (4.8:1 sobre blanco).
 - Sobre fondos azul suave (`--brand-soft`): `#0877B9` sólo da 4.22:1 → usa **`--text-link-strong`** (`#0668a5`, 5.2:1). Ya está aplicado a nav activo, botones secundarios y hover; no lo reviertas a `--brand-strong`.
 - Tokens dark derivados: `--page-bg #0b1220`, `--surface-bg #101a2b`, `--surface-raised #152033`, `--text-strong #e6edf6`, `--text-muted #9fb0c6`. Todos ≥4.5:1, comprobado.
+- **Sobre `--brand-strong` como fondo:** el hero lo usa con texto `--text-on-brand` (4.83:1 claro / 8.01:1 oscuro, ambos AA). Pero si pones texto de marca *encima* de `--brand-strong`, usa siempre `--text-on-brand`, nunca blanco fijo: el fondo se aclara en tema oscuro y el blanco cae a 2.35:1.
 
 ## Flujo obligatorio
 

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Institución — Institución Educativa Madre Laura</title>
+    <meta name="description" content="Historia, contextualización, principios rectores, valores y símbolos de la Institución Educativa Madre Laura de Apartadó." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('madre-laura-tema');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+    <site-header></site-header>
+    <site-breadcrumbs crumbs="Institución"></site-breadcrumbs>
+    <main id="contenido">
+      <div class="container">
+              <div class="container">
+        <header class="page-header">
+          <span class="eyebrow">Institución</span>
+          <h1>Institución Educativa Madre Laura</h1>
+          <p class="page-header__lead">Reseña histórica, contextualización, principios, valores y símbolos de una institución con historia en Apartadó, Antioquia.</p>
+        </header>
+      </div>
+        <div class="card-grid seccion-grid">
+          <article class="card" data-reveal>
+            <h2 class="card__title">Contextualización</h2>
+            <p>El barrio Ortiz, la comuna N.° 4 José Joaquín Vélez y las dimensiones del entorno.</p>
+            <a class="card__link" href="/institucion/contextualizacion/">Conocer nuestro contexto</a>
+          </article>
+          <article class="card" data-reveal>
+            <h2 class="card__title">Nuestra historia</h2>
+            <p>Fundación en 1967, origen, construcción y línea de tiempo institucional.</p>
+            <a class="card__link" href="/institucion/historia/">Conocer nuestra historia</a>
+          </article>
+          <article class="card" data-reveal>
+            <h2 class="card__title">Principios rectores</h2>
+            <p>Los principios que orientan el quehacer educativo de la institución.</p>
+            <a class="card__link" href="/institucion/principios-rectores/">Ver principios rectores</a>
+          </article>
+          <article class="card" data-reveal>
+            <h2 class="card__title">Valores institucionales</h2>
+            <p>Los valores que la comunidad educativa trabaja y sustenta.</p>
+            <a class="card__link" href="/institucion/valores/">Ver valores</a>
+          </article>
+          <article class="card" data-reveal>
+            <h2 class="card__title">Símbolos institucionales</h2>
+            <p>Bandera, escudo e himno de la Institución Educativa Madre Laura.</p>
+            <a class="card__link" href="/institucion/simbolos/">Ver símbolos</a>
+          </article>
+          <article class="card" data-reveal>
+            <h2 class="card__title">Identidad Laurista</h2>
+            <p>El legado de Laura Montoya Upegui y la Congregación Laurista.</p>
+            <a class="card__link" href="/institucion/identidad-laurista/">Conocer la identidad</a>
+          </article>
+        </div>
+      </div>
+    </main>
+    <site-footer></site-footer>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>
